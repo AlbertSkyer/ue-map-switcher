@@ -1,0 +1,19 @@
+{
+	"FileVersion": 3,
+	"Version": 1,
+	"VersionName": "1.0.0",
+	"FriendlyName": "Map Switcher",
+	"Description": "Adds a configurable editor toolbar dropdown for jumping between project levels.",
+	"Category": "Editor",
+	"CreatedBy": "TheChildrenOfStars",
+	"CanContainContent": false,
+	"IsBetaVersion": false,
+	"Installed": false,
+	"Modules": [
+		{
+			"Name": "MapSwitcher",
+			"Type": "Editor",
+			"LoadingPhase": "PostEngineInit"
+		}
+	]
+}
