@@ -1,10 +1,10 @@
 # Map Switcher
 
-Map Switcher is a lightweight Unreal Engine editor plugin that adds a configurable toolbar dropdown for quickly opening project maps.
+Map Switcher is a lightweight Unreal Engine editor plugin that adds a configurable Level Editor toolbar dropdown for quickly opening project maps.
 
 ## Features
 
-- Adds a `跳转场景` dropdown button to the Level Editor toolbar.
+- Adds a small map-switching dropdown icon to the Level Editor toolbar.
 - Lets you configure display names and map assets in Project Settings.
 - Opens configured maps from the editor without searching the Content Browser.
 - Handles empty configuration, missing map assets, invalid paths, and Play-In-Editor sessions.
@@ -39,7 +39,7 @@ If `Name` is empty, the plugin uses the map asset name as the dropdown label.
 
 ## Usage
 
-Click `跳转场景` in the Level Editor toolbar and select a configured map.
+Click the Map Switcher dropdown icon in the Level Editor toolbar and select a configured map.
 
 The plugin blocks map switching while PIE/SIE is active. If the current map has unsaved changes, Unreal's standard save prompt is shown before loading the selected map.
 
