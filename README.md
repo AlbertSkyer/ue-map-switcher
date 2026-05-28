@@ -80,26 +80,35 @@ MIT
 
 ---
 
-# Map Switcher 涓枃璇存槑
+# Map Switcher 中文说明
 
-Map Switcher 鏄竴涓交閲忕骇 Unreal Engine 缂栬緫鍣ㄦ彃浠讹紝鐢ㄤ簬鍦?Level Editor 宸ュ叿鏍忎腑蹇€熸墦寮€浣犻厤缃ソ鐨勫湴鍥俱€?
-## 鍔熻兘
+Map Switcher 是一个轻量级 Unreal Engine 编辑器插件，用于在 Level Editor 工具栏中快速打开你配置好的地图。
 
-- 鍦?Level Editor 宸ュ叿鏍忎腑娣诲姞涓€涓揣鍑戠殑鍦板浘鍒囨崲涓嬫媺鍥炬爣銆?- 鍙湪 Project Settings 涓厤缃樉绀哄悕绉板拰鍦板浘璧勬簮銆?- 鏃犻渶鍦?Content Browser 涓煡鎵撅紝鍗冲彲蹇€熸墦寮€甯哥敤鍦板浘銆?- 澶勭悊绌洪厤缃€佸湴鍥捐祫婧愮己澶便€侀潪娉曡矾寰勩€丳IE/SIE 杩愯涓瓑杈圭晫鎯呭喌銆?- 鍒囨崲鍦板浘鍓嶄娇鐢?Unreal 鏍囧噯鐨勬湭淇濆瓨淇敼鎻愮ず銆?
-## 鍏煎鎬?
+## 功能
+
+- 在 Level Editor 工具栏中添加一个紧凑的地图切换下拉图标。
+- 可在 Project Settings 中配置显示名称和地图资源。
+- 无需在 Content Browser 中查找，即可快速打开常用地图。
+- 处理空配置、地图资源缺失、非法路径、PIE/SIE 运行中等边界情况。
+- 切换地图前使用 Unreal 标准的未保存修改提示。
+
+## 兼容性
+
 - Unreal Engine 5.6
-- 浠呯紪杈戝櫒鎻掍欢锛屼笉褰卞搷鎵撳寘杩愯鏃?
-## 瀹夎
+- 仅编辑器插件，不影响打包运行时
 
-### 鏂瑰紡 A锛氱洿鎺ュ厠闅嗗埌椤圭洰
+## 安装
 
-鍦ㄤ綘鐨?Unreal 椤圭洰鏍圭洰褰曟墽琛岋細
+### 方式 A：直接克隆到项目
+
+在你的 Unreal 项目根目录执行：
 
 ```bash
 git clone https://github.com/AlbertSkyer/ue-map-switcher.git Plugins/MapSwitcher
 ```
 
-鐩綍缁撴瀯搴斾负锛?
+目录结构应为：
+
 ```text
 YourProject/
   Plugins/
@@ -108,32 +117,45 @@ YourProject/
       Source/
 ```
 
-### 鏂瑰紡 B锛氫笅杞?ZIP
+### 方式 B：下载 ZIP
 
-1. 涓嬭浇鏈粨搴撶殑 ZIP銆?2. 瑙ｅ帇鍒?Unreal 椤圭洰鐨?`Plugins` 鏂囦欢澶广€?3. 濡傛湁闇€瑕侊紝灏嗚В鍘嬪悗鐨勬枃浠跺す鏀瑰悕涓?`MapSwitcher`銆?
-鏈€缁堣矾寰勫簲涓猴細
+1. 下载本仓库的 ZIP。
+2. 解压到 Unreal 项目的 `Plugins` 文件夹。
+3. 如有需要，将解压后的文件夹改名为 `MapSwitcher`。
+
+最终路径应为：
 
 ```text
 YourProject/Plugins/MapSwitcher/MapSwitcher.uplugin
 ```
 
-瀹夎鍚庯細
+安装后：
 
-1. 濡傛湁闇€瑕侊紝閲嶆柊鐢熸垚椤圭洰鏂囦欢銆?2. 缂栬瘧浣犵殑 Editor target銆?3. 濡傛灉鎻掍欢娌℃湁鑷姩鍚敤锛屽湪 Plugins 绐楀彛涓惎鐢?`Map Switcher`銆?
-## 閰嶇疆
+1. 如有需要，重新生成项目文件。
+2. 编译你的 Editor target。
+3. 如果插件没有自动启用，在 Plugins 窗口中启用 `Map Switcher`。
 
-鎵撳紑锛?
+## 配置
+
+打开：
+
 ```text
 Edit > Project Settings > Plugins > Map Switcher
 ```
 
-鍦?`Levels` 涓坊鍔犳潯鐩細
+在 `Levels` 中添加条目：
 
-- `Name`锛氫笅鎷夎彍鍗曚腑鏄剧ず鐨勫悕绉般€?- `Level`锛氳鎵撳紑鐨勫湴鍥捐祫婧愩€?
-濡傛灉 `Name` 鐣欑┖锛屾彃浠朵細浣跨敤鍦板浘璧勬簮鍚嶄綔涓轰笅鎷夎彍鍗曟樉绀哄悕绉般€?
-## 浣跨敤
+- `Name`：下拉菜单中显示的名称。
+- `Level`：要打开的地图资源。
 
-鐐瑰嚮 Level Editor 宸ュ叿鏍忎腑鐨?Map Switcher 涓嬫媺鍥炬爣锛岀劧鍚庨€夋嫨宸查厤缃殑鍦板浘銆?
-鎻掍欢浼氶樆姝㈠湪 PIE/SIE 杩愯涓垏鎹㈠湴鍥俱€傚鏋滃綋鍓嶅湴鍥炬湁鏈繚瀛樹慨鏀癸紝Unreal 浼氬厛鏄剧ず鏍囧噯淇濆瓨鎻愮ず锛屽啀鎵撳紑鐩爣鍦板浘銆?
-## 璁稿彲璇?
+如果 `Name` 留空，插件会使用地图资源名作为下拉菜单显示名称。
+
+## 使用
+
+点击 Level Editor 工具栏中的 Map Switcher 下拉图标，然后选择已配置的地图。
+
+插件会阻止在 PIE/SIE 运行中切换地图。如果当前地图有未保存修改，Unreal 会先显示标准保存提示，再打开目标地图。
+
+## 许可证
+
 MIT
